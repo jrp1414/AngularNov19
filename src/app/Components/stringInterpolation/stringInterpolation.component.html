@@ -1,0 +1,80 @@
+<h2>String Interpolation Examples</h2>
+<div class="row alert alert-info">
+    <div class="col-md-4">
+        Basic String Interpolation Example 1
+    </div>
+    <div class="col-md-4">
+        {{5+4}}
+    </div>
+</div>
+<div class="row alert alert-info">
+    <div class="col-md-4">
+        Basic String Interpolation Example 2 - Number
+    </div>
+    <div class="col-md-4">
+        {{someNumber}}
+    </div>
+</div>
+<div class="row alert alert-info">
+    <div class="col-md-4">
+        Basic String Interpolation Example 2 - String
+    </div>
+    <div class="col-md-4">
+        {{someText}}
+    </div>
+</div>
+<div class="row alert alert-info">
+    <div class="col-md-4">
+        Basic String Interpolation Example 2 - Boolean
+    </div>
+    <div class="col-md-4">
+        {{someBoolean}}
+    </div>
+</div>
+
+<div class="row alert alert-info">
+    <div class="col-md-4">
+        Basic String Interpolation Example 2 - Calling Function (Parameter Less)
+    </div>
+    <div class="col-md-4">
+        {{someFunc1()}}
+    </div>
+</div>
+
+<div class="row alert alert-info">
+    <div class="col-md-4">
+        Basic String Interpolation Example 2 - Calling Function (With Parameter)
+    </div>
+    <div class="col-md-4">
+        {{someFunc2(25,35)}}
+    </div>
+</div>
+
+<hr />
+
+<h3>What we cannot do using String Interpolation</h3>
+<div class="row alert alert-danger">
+    <div class="col-md-4">
+        We cannot have chained Expression inside string interpolation
+    </div>
+    <div class="col-md-4">
+        <!-- {{4+5;5+6}}-->
+    </div>
+</div>
+
+<div class="row alert alert-danger">
+    <div class="col-md-4">
+        We cannot assign value to any variable inside string interpolation expression
+    </div>
+    <div class="col-md-4">
+        <!-- {{someText='Test'}} -->
+    </div>
+</div>
+<div class="row alert alert-danger">
+    <div class="col-md-4">
+        We cannot create new objects inside string interpolation expression
+    </div>
+    <div class="col-md-4">
+        <!-- {{new Student()}} -->
+    </div>
+</div>
