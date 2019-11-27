@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-event-binding',
@@ -7,16 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent {
 
-  ClickExample(){
+  ClickExample() {
     alert("Test");
   }
 
-  DoubleClickExample(){
+  DoubleClickExample() {
     alert("Double Clicked");
   }
 
-  TextChange(data){
-    
+  TextChange(data) {
+    console.log(data.target.value);
+  }
+  Message:string;
+  MouseEnter(){
+    this.Message="Entered";
+  }
+
+  MouseLeave(){
+    this.Message="Out";
   }
 
 }

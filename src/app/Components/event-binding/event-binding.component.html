@@ -1,29 +1,36 @@
 <h2>Event Binding Examples</h2>
-<div class="row alert alert-info">
-    <div class="col-md-4">
-        Click Event Example
+<div class="container" (mouseenter)="MouseEnter()" (mouseleave)="MouseLeave()">
+    <div class="row alert alert-info">
+        <div class="col-md-4">
+            Click Event Example
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary" (click)="ClickExample()">Click Example</button>
+        </div>
     </div>
-    <div class="col-md-4">
-        <button class="btn btn-primary" (click)="ClickExample()" >Click Example</button>
+    <div class="row alert alert-info">
+        <div class="col-md-4">
+            Double Click Event Example
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary" (dblclick)="DoubleClickExample()">Double Click Example</button>
+        </div>
     </div>
-</div>
-<div class="row alert alert-info">
-  <div class="col-md-4">
-      Double Click Event Example
-  </div>
-  <div class="col-md-4">
-      <button class="btn btn-primary" (dblclick)="DoubleClickExample()" >Double Click Example</button>
-  </div>
+
+    <div class="row alert alert-info">
+        <div class="col-md-4">
+            Text Change Event Example
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="text" class="form-control" (input)="TextChange($event)" placeholder="Text Change Example">
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row alert alert-info">
-  <div class="col-md-4">
-      Text Change Event Example
-  </div>
-  <div class="col-md-4">
-      <div class="form-group">
-        <input type="text"
-          class="form-control" (input)="" placeholder="Text Change Example">  
-      </div>
-  </div>
+<div class="row alert alert-danger">
+    <div class="col-md-4">
+        {{Message}}
+    </div>
 </div>

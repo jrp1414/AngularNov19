@@ -1,0 +1,41 @@
+<div class="container">
+  <h2>One Way Binding Example</h2>
+  <div class="row">
+    <div class="col-md-4">
+      {{OneWayData}}
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" (input)="OneWayChange($event)" />
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="UpdateValueOneWay()">Change Value</button>
+    </div>
+  </div>
+  <hr>
+  <!-- <h2>Two Way Binding Example</h2>
+  <div class="row">
+    <div class="col-md-4">
+      {{TwoWayData}}
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" [(ngModel)]="TwoWayData" />
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="UpdateValueTwoWay()">Change Value</button>
+    </div>
+  </div> -->
+
+  <hr>
+  <h2>Two Way Binding Example 2</h2>
+  <div class="row">
+    <div class="col-md-4">
+      {{TwoWayData}}
+    </div>
+    <div class="col-md-4">
+      <input type="text" class="form-control" [ngModel]="TwoWayData" (ngModelChange)="TwoWayChange($event)" />
+    </div>
+    <div class="col-md-4">
+      <button type="button" class="btn btn-primary" (click)="UpdateValueTwoWay2()">Change Value</button>
+    </div>
+  </div>
+</div>
