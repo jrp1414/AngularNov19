@@ -7,6 +7,7 @@ import {StringInterpolationComonent} from "./Components/stringInterpolation/stri
 import { PropertyBindingComponent } from './Components/property-binding/property-binding.component';
 import { EventBindingComponent } from './Components/event-binding/event-binding.component';
 import { TwowayBindingComponent } from './Components/twoway-binding/twoway-binding.component';
+import { StuctDirectivesComponent } from './Components/stuct-directives/stuct-directives.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { TwowayBindingComponent } from './Components/twoway-binding/twoway-bindi
     StringInterpolationComonent,
     PropertyBindingComponent,
     EventBindingComponent,
-    TwowayBindingComponent
+    TwowayBindingComponent,
+    StuctDirectivesComponent
   ],
   imports: [
     BrowserModule,

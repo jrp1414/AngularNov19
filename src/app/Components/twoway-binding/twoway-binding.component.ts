@@ -18,6 +18,7 @@ export class TwowayBindingComponent {
 
   TwoWayData:string;
   TwoWayChange(data:string){
+    
     this.TwoWayData = data.toUpperCase();
   }
   UpdateValueTwoWay(){
