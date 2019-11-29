@@ -8,6 +8,7 @@ import { PropertyBindingComponent } from './Components/property-binding/property
 import { EventBindingComponent } from './Components/event-binding/event-binding.component';
 import { TwowayBindingComponent } from './Components/twoway-binding/twoway-binding.component';
 import { StuctDirectivesComponent } from './Components/stuct-directives/stuct-directives.component';
+import { ProductsListComponent } from './Components/products/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { StuctDirectivesComponent } from './Components/stuct-directives/stuct-di
     PropertyBindingComponent,
     EventBindingComponent,
     TwowayBindingComponent,
-    StuctDirectivesComponent
+    StuctDirectivesComponent,
+    ProductsListComponent
   ],
   imports: [
     BrowserModule,

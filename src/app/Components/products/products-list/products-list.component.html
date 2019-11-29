@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Products List</h2>
+  <table class="table table-hover table-inverse table-responsive">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Release Date</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Star Rating</th>
+        <th>Image</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let prod of products" [style.backgroundColor]="prod.starRating>3?'yellowgreen':'yellow'"> -->
+      <!-- <tr *ngFor="let prod of products" [style.backgroundColor]="GetBackgroundColor(prod)" [style.color]="GetColor(prod)" > -->
+      <!-- <tr *ngFor="let prod of products"
+        [ngStyle]="{backgroundColor: prod.starRating>3?'yellowgreen':'yellow',color:prod.starRating>3?'white':'blue'}"> -->
+      <!-- <tr *ngFor="let prod of products" [class]="prod.starRating>3?'Rating4':'Rating2'"> -->
+      <!-- <tr *ngFor="let prod of products" [class.Rating1]="prod.starRating==1" [class.Rating2]="prod.starRating==2"
+        [class.Rating3]="prod.starRating==3" [class.Rating4]="prod.starRating==4" [class.Rating5]="prod.starRating==5"> -->
+      <!-- <tr *ngFor="let prod of products" [class]="GetClass(prod)"> -->
+      <!-- <tr *ngFor="let prod of products" [ngClass]="{
+                        Rating1: prod.starRating==1,
+                        Rating2: prod.starRating==2,
+                        Rating3: prod.starRating==3,
+                        Rating4: prod.starRating==4,
+                        Rating5: prod.starRating==5,
+                        italic: prod.starRating==5}"> -->
+      <tr *ngFor="let prod of products" [ngClass]="GetClasses(prod)">
+        <td scope="row">{{prod.productId}}</td>
+        <td>{{prod.productName}}</td>
+        <td>{{prod.productCode}}</td>
+        <td>{{prod.releaseDate}}</td>
+        <td>{{prod.description}}</td>
+        <td>{{prod.price}}</td>
+        <td>{{prod.starRating}}</td>
+        <td>
+          <img [src]="prod.imageUrl" [alt]="prod.productName" [style.width]="imageWidth" [style.height]="imageHeight">
+        </td>
+        <td>{{prod.emailId}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>

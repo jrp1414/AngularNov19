@@ -1,0 +1,32 @@
+
+.Rating1{
+    background-color: maroon;
+    color: oldlace;
+    font-weight: bold;
+}
+.Rating2{
+    background-color: red;
+    color: yellow;
+    font-weight: bold;
+}
+.Rating3{
+    background-color: yellow;
+    color: blue;
+    font-weight: bold;
+}
+.Rating4{
+    background-color: yellowgreen;
+    color: black;
+    font-weight: bold;
+}
+.Rating5{
+    background-color: green;
+    color: aqua;
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+    font-stretch: expanded;
+    font-size: larger;
+}
