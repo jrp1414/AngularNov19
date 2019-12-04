@@ -9,6 +9,7 @@ import { EventBindingComponent } from './Components/event-binding/event-binding.
 import { TwowayBindingComponent } from './Components/twoway-binding/twoway-binding.component';
 import { StuctDirectivesComponent } from './Components/stuct-directives/stuct-directives.component';
 import { ProductsListComponent } from './Components/products/products-list/products-list.component';
+import { ProductThumbnailComponent } from './Components/products/product-thumbnail/product-thumbnail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductsListComponent } from './Components/products/products-list/produ
     EventBindingComponent,
     TwowayBindingComponent,
     StuctDirectivesComponent,
-    ProductsListComponent
+    ProductsListComponent,
+    ProductThumbnailComponent
   ],
   imports: [
     BrowserModule,

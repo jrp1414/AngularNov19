@@ -1,0 +1,65 @@
+<div class="card" style="background-color:chartreuse; border-color:darkblue;">
+  <img class="card-img-top" [src]="product.imageUrl" style="width: 100px;height: 100px;" alt="">
+  <div class="card-body">
+    <h4 class="card-title">{{product.productName}}</h4>
+    <div class="card-text">
+      <div class="row">
+        <div class="col-md-6">
+          Product Code
+        </div>
+        <div class="col-md-6">
+          {{product.productCode}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Release Date
+        </div>
+        <div class="col-md-6">
+          {{product.releaseDate}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Description
+        </div>
+        <div class="col-md-6">
+          {{product.description}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Price
+        </div>
+        <div class="col-md-6">
+          {{product.price}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Rating
+        </div>
+        <div class="col-md-6">
+          {{product.starRating}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          Email Id
+        </div>
+        <div class="col-md-6">
+          {{product.emailId}}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          
+        </div>
+        <div class="col-md-6">
+          <button type="button" class="btn btn-primary" (click)="SendDataToParent()" >Send to Parent</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
