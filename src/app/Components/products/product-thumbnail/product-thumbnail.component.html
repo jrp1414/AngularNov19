@@ -1,14 +1,15 @@
-<div class="card" style="background-color:chartreuse; border-color:darkblue;">
+<div class="card" style="background-color:aqua; border-color:darkblue;">
   <img class="card-img-top" [src]="product.imageUrl" style="width: 100px;height: 100px;" alt="">
   <div class="card-body">
-    <h4 class="card-title">{{product.productName}}</h4>
+    <h4 class="card-title">{{product.productName | uppercase}}</h4>
     <div class="card-text">
+      
       <div class="row">
         <div class="col-md-6">
           Product Code
         </div>
         <div class="col-md-6">
-          {{product.productCode}}
+          {{product.productCode | lowercase}}
         </div>
       </div>
       <div class="row">
@@ -24,7 +25,7 @@
           Description
         </div>
         <div class="col-md-6">
-          {{product.description}}
+          {{product.description?.descText}}
         </div>
       </div>
       <div class="row">
@@ -32,7 +33,7 @@
           Price
         </div>
         <div class="col-md-6">
-          {{product.price}}
+          {{product.price | currency :'EUR':true:'1.1'}}
         </div>
       </div>
       <div class="row">
@@ -48,7 +49,7 @@
           Email Id
         </div>
         <div class="col-md-6">
-          {{product.emailId}}
+          {{product.description?.emailId}}
         </div>
       </div>
 
