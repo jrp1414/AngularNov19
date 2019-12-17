@@ -10,6 +10,7 @@ import { TwowayBindingComponent } from './Components/twoway-binding/twoway-bindi
 import { StuctDirectivesComponent } from './Components/stuct-directives/stuct-directives.component';
 import { ProductsListComponent } from './Components/products/products-list/products-list.component';
 import { ProductThumbnailComponent } from './Components/products/product-thumbnail/product-thumbnail.component';
+import { ShortenPipe } from './Pipes/shorten.pipe';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { ProductThumbnailComponent } from './Components/products/product-thumbna
     TwowayBindingComponent,
     StuctDirectivesComponent,
     ProductsListComponent,
-    ProductThumbnailComponent
-  ],
+    ProductThumbnailComponent,
+    ShortenPipe
+  ], //Components,Directives,Pipes goes into Declaration Section
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [], // Services goes into Providers Section
   bootstrap: [AppComponent]
 })
 export class AppModule { }

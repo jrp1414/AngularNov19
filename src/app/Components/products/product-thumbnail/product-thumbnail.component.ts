@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
 
 
 @Component({
   selector: 'app-product-thumbnail',
   templateUrl: './product-thumbnail.component.html',
   styleUrls: ['./product-thumbnail.component.css']
+  // encapsulation:ViewEncapsulation.Emulated
 })
 export class ProductThumbnailComponent {
   
