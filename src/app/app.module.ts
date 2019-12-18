@@ -13,6 +13,7 @@ import { ProductThumbnailComponent } from './Components/products/product-thumbna
 import { ShortenPipe } from './Pipes/shorten.pipe';
 import { ReplaceCharPipe } from './Pipes/replace-char.pipe';
 import { FilterPipe } from './Pipes/filter.pipe';
+import { BasicHighlightDirective } from './Directives/basicHighlight.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterPipe } from './Pipes/filter.pipe';
     ProductThumbnailComponent,
     ShortenPipe,
     ReplaceCharPipe,
-    FilterPipe
+    FilterPipe,
+    BasicHighlightDirective
   ], //Components,Directives,Pipes goes into Declaration Section
   imports: [
     BrowserModule,
