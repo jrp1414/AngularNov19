@@ -25,7 +25,8 @@
           Description
         </div>
         <div class="col-md-6">
-          {{product.description?.descText | shorten}}
+          <!-- {{product.description?.descText | shorten }} -->
+          {{product.description?.descText | replaceChar : 'a':'@'}}
         </div>
       </div>
       <div class="row">

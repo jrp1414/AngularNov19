@@ -19,4 +19,6 @@ export class ProductThumbnailComponent {
     this.emitData.emit(name);
   }
 
+  
+
 }

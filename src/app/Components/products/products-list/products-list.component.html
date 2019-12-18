@@ -10,7 +10,10 @@
     </div>
     <div class="col-md-2">
       <input type="text"
-          class="form-control" #filter (input)="FilterChanged($event)" placeholder="Search Product">
+          class="form-control" #filter [(ngModel)]="filterText" placeholder="Search Product">
+    </div>
+    <div class="col-md-2">
+      <button type="button" class="btn btn-primary" (click)="TestImpurity()">Test Impurity</button>
     </div>
     
   </div>
@@ -18,7 +21,7 @@
     <strong>{{Message}}</strong>
   </div>
   <div class="row">
-    <div *ngFor="let prod of productList" class="col-md-4">
+    <div *ngFor="let prod of productList | filter:'productName':filterText" class="col-md-4">
       <app-product-thumbnail [pd]="prod" (ed)="ReceiveDataFromChild($event)"></app-product-thumbnail>
       <!-- <div>
         {{prod | json}}

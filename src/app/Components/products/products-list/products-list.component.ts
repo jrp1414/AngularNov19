@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { products, Product } from "../product-api";
+import { products, Product, description } from "../product-api";
 
 @Component({
   selector: 'app-products-list',
@@ -13,6 +13,7 @@ export class ProductsListComponent {
   productList = products;
   Test: string = "yellow";
   Message: string = "";
+  filterText:string="";
 
   @ViewChild("filter") filter: ElementRef;
   today = new Date();
@@ -23,13 +24,17 @@ export class ProductsListComponent {
 
   FilterChanged(data) {
     let filteredProducts: Product[] = [];
-
     products.forEach(prod => {
       if (prod.productName.toLocaleLowerCase().indexOf(this.filter.nativeElement.value.toLocaleLowerCase()) != -1) {
         filteredProducts.push(prod);
       }
     });
     this.productList = filteredProducts;
+  }
+
+  TestImpurity(){
+    this.productList.push(new Product(7,"Leaf Rake","Test","Test",25,5,"Test",new description("Test","Test")));
+    console.log(this.productList);
   }
 
 

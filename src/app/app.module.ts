@@ -11,6 +11,8 @@ import { StuctDirectivesComponent } from './Components/stuct-directives/stuct-di
 import { ProductsListComponent } from './Components/products/products-list/products-list.component';
 import { ProductThumbnailComponent } from './Components/products/product-thumbnail/product-thumbnail.component';
 import { ShortenPipe } from './Pipes/shorten.pipe';
+import { ReplaceCharPipe } from './Pipes/replace-char.pipe';
+import { FilterPipe } from './Pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ShortenPipe } from './Pipes/shorten.pipe';
     StuctDirectivesComponent,
     ProductsListComponent,
     ProductThumbnailComponent,
-    ShortenPipe
+    ShortenPipe,
+    ReplaceCharPipe,
+    FilterPipe
   ], //Components,Directives,Pipes goes into Declaration Section
   imports: [
     BrowserModule,
