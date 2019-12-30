@@ -14,6 +14,8 @@ import { ShortenPipe } from './Pipes/shorten.pipe';
 import { ReplaceCharPipe } from './Pipes/replace-char.pipe';
 import { FilterPipe } from './Pipes/filter.pipe';
 import { BasicHighlightDirective } from './Directives/basicHighlight.directive';
+import { BetterHighlightDirective } from './Directives/better-highlight.directive';
+import { UnlessDirective } from './Directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BasicHighlightDirective } from './Directives/basicHighlight.directive';
     ShortenPipe,
     ReplaceCharPipe,
     FilterPipe,
-    BasicHighlightDirective
+    BasicHighlightDirective,
+    BetterHighlightDirective,
+    UnlessDirective
   ], //Components,Directives,Pipes goes into Declaration Section
   imports: [
     BrowserModule,
