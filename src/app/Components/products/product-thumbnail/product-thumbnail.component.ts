@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } from '@angular/core';
+import { LoggingService } from 'src/app/Services/logging.service';
 
 
 @Component({
@@ -8,6 +9,10 @@ import { Component, OnInit, Input, EventEmitter, Output, ViewEncapsulation } fro
   // encapsulation:ViewEncapsulation.Emulated
 })
 export class ProductThumbnailComponent {
+
+  constructor(public ls:LoggingService) {
+    
+  }
   
   @Input('pd') product:any;
   @Output('ed') emitData:EventEmitter<string>=new EventEmitter<string>();
@@ -16,6 +21,7 @@ export class ProductThumbnailComponent {
 
   SendDataToParent(){
     let name = prompt("Enter your Name");
+    this.ls.SuccessLog(name);
     this.emitData.emit(name);
   }
 

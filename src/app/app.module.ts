@@ -16,6 +16,8 @@ import { FilterPipe } from './Pipes/filter.pipe';
 import { BasicHighlightDirective } from './Directives/basicHighlight.directive';
 import { BetterHighlightDirective } from './Directives/better-highlight.directive';
 import { UnlessDirective } from './Directives/unless.directive';
+import { TempProductsComponent } from './Components/temp-products/temp-products.component';
+import { LoggingService } from './Services/logging.service';
 
 @NgModule({
   declarations: [
@@ -32,13 +34,14 @@ import { UnlessDirective } from './Directives/unless.directive';
     FilterPipe,
     BasicHighlightDirective,
     BetterHighlightDirective,
-    UnlessDirective
+    UnlessDirective,
+    TempProductsComponent
   ], //Components,Directives,Pipes goes into Declaration Section
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [], // Services goes into Providers Section
+  providers: [LoggingService], // Services goes into Providers Section
   bootstrap: [AppComponent]
 })
 export class AppModule { }

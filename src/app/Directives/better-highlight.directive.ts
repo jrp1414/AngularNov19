@@ -1,4 +1,5 @@
 import { Directive, ElementRef, OnInit, Input, Renderer2, HostBinding, HostListener } from '@angular/core';
+import { LoggingService } from '../Services/logging.service';
 
 @Directive({
   selector: '[better-highlight]'
@@ -19,13 +20,14 @@ export class BetterHighlightDirective implements OnInit {
     this.backgroundColor = this.DefaultColor;
   }
 
-  constructor(public el: ElementRef, public renderer: Renderer2) { }
+  constructor(public el: ElementRef, public renderer: Renderer2,public ls:LoggingService) { }
 
   @HostListener('mouseenter') onMouseEnter() {
     this.backgroundColor = this.HighlightColor;
   }
 
   @HostListener('mouseleave') onMouseLeave() {
+    this.ls.SuccessLog("Leaving");
     this.backgroundColor = this.DefaultColor;
   }
 
