@@ -1,25 +1,26 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { products, Product, description } from "../product-api";
+import { Product, description } from "../product-api";
 import { LoggingService } from 'src/app/Services/logging.service';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['./products-list.component.css']  
+  styleUrls: ['./products-list.component.css'],
+  // providers:[ProductService]
 })
 export class ProductsListComponent {
 
   imageWidth: string = "75px";
   imageHeight: string = "75px";
-  productList = products;
+  productList:Product[] = [];
   Test: string = "yellow";
   Message: string = "";
   filterText:string="";
 
   
-  constructor(public ls:LoggingService) {
-    
-    
+  constructor(public ls:LoggingService,public ps:ProductService) {
+      this.productList = ps.getProducts();
   }
 
   @ViewChild("filter") filter: ElementRef;
@@ -32,7 +33,7 @@ export class ProductsListComponent {
   FilterChanged(data) {
     this.ls.SuccessLog("Success");
     let filteredProducts: Product[] = [];
-    products.forEach(prod => {
+    this.productList.forEach(prod => {
       if (prod.productName.toLocaleLowerCase().indexOf(this.filter.nativeElement.value.toLocaleLowerCase()) != -1) {
         filteredProducts.push(prod);
       }

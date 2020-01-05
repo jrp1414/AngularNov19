@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoggingService } from 'src/app/Services/logging.service';
+import { ProductService } from 'src/app/Services/product.service';
 
 @Component({
   selector: 'app-temp-products',
@@ -14,6 +15,7 @@ export class TempProductsComponent implements OnInit {
   }
 
   ngOnInit() {
+    
   }
 
 }
