@@ -1,0 +1,77 @@
+<div class="row">
+  <div style="margin-left: 300px;" class="col-md-6">
+    <div class="card">
+      <h3 class="card-title">{{product.productName | uppercase}} Details</h3>
+      <img class="card-img-top" [src]="product.imageUrl" style="width: 100px;height: 100px;" alt="">
+      <div class="card-body">
+        <div class="card-text">
+
+          <div class="row">
+            <div class="col-md-3">
+              Product Code
+            </div>
+            <div class="col-md-3">
+              {{product.productCode | lowercase}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              Release Date
+            </div>
+            <div class="col-md-3">
+              {{product.releaseDate}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              Description
+            </div>
+            <div class="col-md-3">
+              {{product.description?.descText}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              Price
+            </div>
+            <div class="col-md-3">
+              {{product.price | currency :'EUR':true:'1.1'}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              Rating
+            </div>
+            <div class="col-md-3">
+              {{product.starRating}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              Email Id
+            </div>
+            <div class="col-md-3">
+              {{product.description?.emailId}}
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-outline-primary" (click)="BackToProductsList()">Back to Products
+                List</button>
+            </div>
+            
+            <div class="col-md-4">
+              <!-- <button type="button" class="btn btn-outline-primary" [routerLink]="['edit']">Edit</button> -->
+              <button type="button" class="btn btn-outline-primary" (click)="RedirectToEdit(product.productId)" >Edit</button>
+            </div>
+            
+            <!-- <div class="col-md-4">
+              <button type="button" class="btn btn-primary" (click)="RedirectToFive()" >Redirect</button>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

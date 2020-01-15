@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Products List</h2>
+  <!-- <a routerLink="/products" >Relaod Page</a> -->
+  <div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-2">
+      Search Product
+    </div>
+    <div class="col-md-2">
+      <input type="text" class="form-control" #filter [(ngModel)]="filterText" placeholder="Search Product">
+    </div>    
+  </div>
+  <div class="row">
+    <div *ngFor="let prod of productList | filter:'productName':filterText" class="col-md-4">
+      <app-product-thumbnail [pd]="prod" (ed)="ReceiveDataFromChild($event)"></app-product-thumbnail>      
+    </div>
+  </div>
+</div>

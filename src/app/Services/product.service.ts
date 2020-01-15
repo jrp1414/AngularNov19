@@ -1,7 +1,7 @@
 import { Injectable, Type } from '@angular/core';
-import { Product,products } from '../Components/products/product-api';
+import { Product,products } from '../products/product-api';
 import { LoggingService } from './logging.service';
-import { ProductsListComponent } from '../Components/products/products-list/products-list.component';
+
 
 @Injectable({
   providedIn:"root"
@@ -16,7 +16,11 @@ export class ProductService {
 
   getProducts(){
     //nvjnfvnjfn
-    this.ls.SuccessLog('Success.....');
+    // this.ls.SuccessLog('Success.....');
     return this.products;
+  }
+
+  getProductDetails(id:number){
+    return this.products.find((product)=>product.productId==id);
   }
 }
