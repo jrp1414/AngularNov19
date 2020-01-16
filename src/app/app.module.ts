@@ -16,6 +16,7 @@ import { LoggingService } from './Services/logging.service';
 import { ProductService } from './Services/product.service';
 import { FooterComponent } from './Components/footer/footer.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { StudentsModule } from './students/students.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DashboardComponent } from './Components/dashboard/dashboard.component';
     BrowserModule,
     FormsModule,
     ProductsModule,
+    StudentsModule,
     AppRoutingModule        
   ],
   providers: [LoggingService], // Services goes into Providers Section
